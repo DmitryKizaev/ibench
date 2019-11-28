@@ -18,4 +18,4 @@ class Dot(Bench):
         self._C = np.asarray(np.random.rand(n, n), dtype=self._dtype)
 
     def _compute(self):
-        self._A.dot(self._B, out=self._C)
+        np.matmul(self._A, self._B, out=self._C)
